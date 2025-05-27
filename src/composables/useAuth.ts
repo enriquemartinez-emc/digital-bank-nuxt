@@ -32,7 +32,8 @@ export default function useAuth() {
 
   async function checkAuth() {
     try {
-      await $fetch("/auth/me", {
+      await $fetch("/auth/status", {
+        baseURL: config.public.apiBaseUrl, // Use the public API base URL
         method: "GET",
         credentials: "include", // Always include credentials
       });
@@ -45,6 +46,7 @@ export default function useAuth() {
   async function logout() {
     try {
       await $fetch("/auth/logout", {
+        baseURL: config.public.apiBaseUrl, // Use the public API base URL
         method: "POST",
         credentials: "include",
       });
