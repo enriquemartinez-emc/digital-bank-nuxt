@@ -25,15 +25,7 @@ useHead({
 </template>
 
 <style>
-/* Set the font family for the entire site */
 body {
   font-family: "Inter";
 }
-/* 
-UContainer {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: var(--nui-background);
-} */
 </style>

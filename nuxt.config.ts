@@ -6,4 +6,9 @@ export default defineNuxtConfig({
   ssr: false,
   modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/test-utils", "@nuxt/ui"],
   css: ["~/assets/css/main.css"],
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE || "http://localhost:5176/api",
+    },
+  },
 });

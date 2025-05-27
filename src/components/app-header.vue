@@ -28,12 +28,3 @@ const items = ref<NavigationMenuItem[]>([
     </div>
   </header>
 </template>
-
-<style scoped>
-UContainer {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: var(--nui-background);
-}
-</style>
