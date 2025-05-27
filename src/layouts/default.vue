@@ -15,13 +15,15 @@ useHead({
 </script>
 
 <template>
-  <AppHeader />
-  <USeparator />
-  <UContainer class="mt-5">
-    <UCard>
-      <slot />
-    </UCard>
-  </UContainer>
+  <div>
+    <AppHeader />
+    <USeparator />
+    <UContainer class="mt-5">
+      <UCard>
+        <slot />
+      </UCard>
+    </UContainer>
+  </div>
 </template>
 
 <style>

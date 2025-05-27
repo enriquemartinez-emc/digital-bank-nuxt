@@ -1,16 +1,18 @@
-export default async function useCustomers() {
+export default function useCustomers() {
   const config = useRuntimeConfig();
   const {
     data: customers,
     pending: loading,
     error,
     refresh: fetchCustomers,
-  } = await useFetch("/customers", {
+  } = useFetch("/customers", {
     baseURL: config.public.apiBaseUrl,
     method: "GET",
     credentials: "include",
     default: () => [],
   });
+
+  console.log("Customers", customers.value);
 
   return {
     customers,
