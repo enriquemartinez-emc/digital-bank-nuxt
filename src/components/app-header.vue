@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
+import { ref } from "vue";
+import UserButton from "./user-button.vue";
+const { authenticated, checkAuth } = useAuth();
+
+onMounted(() => {
+  checkAuth();
+});
 
 const items = ref<NavigationMenuItem[]>([
   { label: "Dashboard", icon: "i-lucide-layout-dashboard", to: "/" },
@@ -17,8 +24,9 @@ const items = ref<NavigationMenuItem[]>([
         Digital Bank
       </NuxtLink>
     </div>
-    <div class="flex-1 flex justify-center min-w-0">
+    <div class="flex-1 flex justify-center">
       <UNavigationMenu
+        v-if="authenticated"
         :items="items"
         color="primary"
         variant="link"
@@ -27,6 +35,7 @@ const items = ref<NavigationMenuItem[]>([
     </div>
     <div class="flex items-center gap-2 flex-1 justify-end min-w-0 mr-5">
       <ColorModeButton />
+      <UserButton v-if="authenticated" />
     </div>
   </header>
 </template>

@@ -2,7 +2,7 @@
 import { z } from "zod";
 import type { FormSubmitEvent } from "@nuxt/ui";
 
-const { form, loading, error, login } = useAuth();
+const { form, loading, error, login, checkAuth } = useAuth();
 
 const schema = z.object({
   username: z.string().min(1, "Username is required"),
@@ -20,7 +20,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   form.value.password = event.data.password;
   const success = await login();
   if (success) {
-    await navigateTo("/");
+    window.location.href = "/";
   }
 }
 </script>

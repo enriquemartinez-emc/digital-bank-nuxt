@@ -18,11 +18,9 @@ useHead({
   <div>
     <AppHeader />
     <USeparator />
-    <UContainer class="mt-5">
-      <UCard>
-        <slot />
-      </UCard>
-    </UContainer>
+    <main class="p-4">
+      <slot />
+    </main>
   </div>
 </template>
 
