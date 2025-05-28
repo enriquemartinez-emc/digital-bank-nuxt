@@ -13,7 +13,6 @@ const items = ref<NavigationMenuItem[]>([
   { label: "Customers", icon: "i-lucide-users", to: "/customers" },
   { label: "Accounts", icon: "i-lucide-credit-card", to: "/accounts" },
   { label: "Transactions", icon: "i-lucide-repeat", to: "/transactions" },
-  { label: "Settings", icon: "i-lucide-settings", to: "/settings" },
 ]);
 </script>
 
