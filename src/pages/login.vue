@@ -3,14 +3,18 @@
     <div class="flex flex-col md:flex-row w-full h-[600px]">
       <!-- Hero Section (Left) -->
       <div
-        class="flex-1 flex flex-col items-start justify-start p-8 md:p-12 h-full"
+        class="hero-bg flex-1 flex flex-col items-start justify-start p-8 md:p-12 h-full"
       >
-        <h2 class="text-4xl font-extrabold mb-4">Welcome to Digital Bank</h2>
-        <p class="text-lg font-medium text-left">
-          Your trusted platform for secure, modern banking.<br />
-          Effortlessly manage your accounts, track transactions, and experience
-          peace of mind—all in one place.
-        </p>
+        <div class="rounded-xl p-6">
+          <h2 class="text-4xl font-extrabold mb-4 drop-shadow">
+            Welcome to Digital Bank
+          </h2>
+          <p class="text-lg font-medium text-left drop-shadow">
+            Your trusted platform for secure, modern banking.<br>
+            Effortlessly manage your accounts, track transactions, and
+            experience peace of mind—all in one place.
+          </p>
+        </div>
       </div>
       <!-- Login Section (Right) -->
       <div
@@ -31,3 +35,11 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.hero-bg {
+  background-image: url("/lady-laptop.jpg");
+  background-size: cover;
+  background-position: center;
+}
+</style>

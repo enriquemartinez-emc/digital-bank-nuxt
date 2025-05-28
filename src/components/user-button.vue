@@ -10,7 +10,6 @@ const userMenuItems = [
   {
     label: "Logout",
     icon: "i-lucide-log-out",
-    color: "error" as const,
     async onSelect() {
       await logout();
       window.location.href = "/login";
@@ -30,9 +29,7 @@ const userMenuItems = [
       variant="soft"
       class="ml-2 p-0 rounded-full w-10 h-10 flex items-center justify-center"
     >
-      <span
-        class="w-8 h-8 rounded-full flex items-center justify-center"
-      >
+      <span class="w-8 h-8 rounded-full flex items-center justify-center">
         <svg
           class="w-6 h-6"
           fill="none"
