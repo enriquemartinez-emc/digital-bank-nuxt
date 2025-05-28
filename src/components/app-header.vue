@@ -11,7 +11,6 @@ onMounted(() => {
 const items = ref<NavigationMenuItem[]>([
   { label: "Dashboard", icon: "i-lucide-layout-dashboard", to: "/" },
   { label: "Customers", icon: "i-lucide-users", to: "/customers" },
-  { label: "Accounts", icon: "i-lucide-credit-card", to: "/accounts" },
   { label: "Transactions", icon: "i-lucide-repeat", to: "/transactions" },
 ]);
 </script>
