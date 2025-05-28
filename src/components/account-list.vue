@@ -33,7 +33,7 @@ const { accounts, loading, error } = useAccounts(props.customerId);
         <tbody>
           <tr v-for="row in accounts" :key="row.id">
             <td class="px-4 py-2">{{ row.accountNumber }}</td>
-            <td class="px-4 py-2">{{ row.initialBalance }}</td>
+            <td class="px-4 py-2">{{ row.balance }}</td>
             <td class="px-4 py-2">
               <UButton
                 :to="`/customers/${props.customerId}/accounts/${row.id}`"
